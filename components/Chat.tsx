@@ -18,7 +18,7 @@ const CloseIcon = () => (
 );
 
 const AssistantAvatar = () => (
-    <div className="w-10 h-10 rounded-full bg-amber-400 flex-shrink-0 flex items-center justify-center">
+    <div className="w-10 h-10 rounded-full bg-lime-400 flex-shrink-0 flex items-center justify-center">
         <span className="text-black font-bold text-lg select-none">GC</span>
     </div>
 );
@@ -64,7 +64,7 @@ export const Chat: React.FC<ChatProps> = ({ messages, onSendMessage, isLoading, 
               {message.role === 'assistant' && (
                  <AssistantAvatar />
               )}
-              <div className={`p-4 rounded-2xl max-w-lg shadow-md ${message.role === 'user' ? 'bg-amber-600 text-black rounded-br-none' : 'bg-gray-800 text-gray-200 rounded-bl-none'}`}>
+              <div className={`p-4 rounded-2xl max-w-lg shadow-md ${message.role === 'user' ? 'bg-lime-400 text-black rounded-br-none' : 'bg-gray-800 text-gray-200 rounded-bl-none'}`}>
                 <p className="whitespace-pre-wrap">{message.text}</p>
               </div>
                {message.role === 'user' && (
@@ -96,7 +96,7 @@ export const Chat: React.FC<ChatProps> = ({ messages, onSendMessage, isLoading, 
                   <button
                     key={index}
                     onClick={() => handleQuickReply(reply)}
-                    className="px-4 py-2 bg-gray-800 hover:bg-amber-600 text-gray-200 hover:text-black rounded-full text-sm transition-colors"
+                    className="px-4 py-2 bg-gray-800 hover:bg-lime-400 text-gray-200 hover:text-black rounded-full text-sm transition-colors"
                   >
                     {reply}
                   </button>
@@ -112,13 +112,13 @@ export const Chat: React.FC<ChatProps> = ({ messages, onSendMessage, isLoading, 
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && handleSend()}
             placeholder="Faça a sua pergunta..."
-            className="w-full bg-gray-900 border border-gray-600 rounded-full py-3 pl-5 pr-16 focus:outline-none focus:ring-2 focus:ring-amber-500 text-white"
+            className="w-full bg-gray-900 border border-gray-600 rounded-full py-3 pl-5 pr-16 focus:outline-none focus:ring-2 focus:ring-lime-400 text-white"
             disabled={isLoading}
           />
           <button
             onClick={handleSend}
             disabled={isLoading || !input.trim()}
-            className="absolute right-3 top-1/2 -translate-y-1/2 bg-amber-600 hover:bg-amber-500 disabled:bg-gray-600 disabled:cursor-not-allowed text-black rounded-full p-2 transition-colors"
+            className="absolute right-3 top-1/2 -translate-y-1/2 bg-lime-400 hover:bg-lime-500 disabled:bg-gray-600 disabled:cursor-not-allowed text-black rounded-full p-2 transition-colors"
           >
             <SendIcon />
           </button>

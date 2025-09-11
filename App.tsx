@@ -42,35 +42,44 @@ const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
 const Logo = () => (
     <div className="flex items-baseline gap-1.5">
         <span className="text-xl font-bold tracking-wide text-white">GRUPO</span>
-        <span className="text-xl font-bold tracking-wide text-amber-400">CATIVANTE</span>
+        <span className="text-xl font-bold tracking-wide text-lime-400">CATIVANTE</span>
     </div>
 );
 const ChevronDownIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>;
-const PhoneIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>;
-const MailIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>;
-const LocationIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>;
+const PhoneIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-lime-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>;
+const MailIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-lime-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>;
+const LocationIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-lime-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>;
 const ChatBubbleIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>;
 const CarIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z" /><path d="M9 20l-5.447-2.724A1 1 0 013 16.382V12a1 1 0 011-1h12a1 1 0 011 1v4.382a1 1 0 01-.553.894L15 20M9 20v-5a1 1 0 011-1h4a1 1 0 011 1v5" /></svg>;
 const ShieldCheckIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 20.917c0 1.34.223 2.63.635 3.834a1.8 1.8 0 001.785 1.252h12.16a1.8 1.8 0 001.785-1.252c.412-1.203.635-2.493.635-3.834 0-3.844-1.18-7.48-3.321-10.34z" /></svg>;
 const TrendingUpIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>;
 const CloseIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
 const WhatsAppIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.886-.001 2.269.655 4.357 1.846 6.215l-1.064 3.886 3.995-1.042z" /></svg>;
-const CheckIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-amber-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+const CheckIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-lime-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
 
 // --- PAGE COMPONENTS ---
 
 const EntryScreen: React.FC<{ onEnter: () => void }> = ({ onEnter }) => (
-    <div className="h-screen w-screen bg-black bg-cover bg-center text-white flex flex-col items-center justify-center p-8" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1554224311-be7786950797?q=80&w=1974&auto=format&fit=crop')" }}>
-        <div className="text-center flex flex-col items-center backdrop-blur-sm bg-black/40 p-10 rounded-lg">
-             <h1 className="text-5xl font-bold tracking-wider">GRUPO</h1>
-             <h2 className="text-5xl font-bold tracking-wider text-amber-400 mb-6">CATIVANTE</h2>
-             <p className="text-xl mb-10 font-light tracking-widest">"BEM-VINDO À FROTA DO FUTURO"</p>
-             <button onClick={onEnter} className="bg-amber-500 text-black font-bold text-lg py-3 px-12 rounded-full border-2 border-amber-500 hover:bg-transparent hover:text-amber-500 transition-all duration-300">
-                ENTRE
-             </button>
+    <div 
+        className="h-screen w-screen bg-black bg-cover bg-center text-white flex flex-col items-center justify-center p-8 relative" 
+        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2070&auto=format&fit=crop')" }}
+    >
+        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="relative z-10 text-center flex flex-col items-center">
+            <div className="mb-12">
+                <h1 className="text-7xl md:text-9xl font-black tracking-tighter text-white uppercase" style={{ textShadow: '3px 3px 6px rgba(0,0,0,0.5)' }}>DRIVE</h1>
+                <h2 className="text-5xl md:text-7xl font-black tracking-tighter text-lime-400 uppercase" style={{ textShadow: '3px 3px 6px rgba(0,0,0,0.5)' }}>YOUR FUTURE</h2>
+            </div>
+            <button 
+                onClick={onEnter} 
+                className="bg-lime-400 text-black font-bold text-xl py-4 px-14 rounded-full border-2 border-lime-400 hover:bg-transparent hover:text-lime-400 transition-all duration-300"
+            >
+                ENTRAR
+            </button>
         </div>
     </div>
 );
+
 
 const Header: React.FC<{ onDriverAreaClick: () => void }> = ({ onDriverAreaClick }) => (
     <header className="bg-black/80 backdrop-blur-sm p-4 sticky top-0 z-40 border-b border-gray-800">
@@ -79,14 +88,14 @@ const Header: React.FC<{ onDriverAreaClick: () => void }> = ({ onDriverAreaClick
                 <Logo />
             </a>
             <nav className="hidden md:flex items-center gap-8 text-sm">
-                <a href="#about" onClick={(e) => handleNavClick(e, 'about')} className="text-gray-300 hover:text-amber-400 transition-colors">Sobre Nós</a>
-                <a href="#services" onClick={(e) => handleNavClick(e, 'services')} className="text-gray-300 hover:text-amber-400 transition-colors">Serviços</a>
-                <a href="#rental-plans" onClick={(e) => handleNavClick(e, 'rental-plans')} className="text-gray-300 hover:text-amber-400 transition-colors">Aluguer</a>
-                <a href="#why-us" onClick={(e) => handleNavClick(e, 'why-us')} className="text-gray-300 hover:text-amber-400 transition-colors">Vantagens</a>
-                <a href="#faq" onClick={(e) => handleNavClick(e, 'faq')} className="text-gray-300 hover:text-amber-400 transition-colors">FAQ</a>
-                <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="text-gray-300 hover:text-amber-400 transition-colors">Contacto</a>
+                <a href="#about" onClick={(e) => handleNavClick(e, 'about')} className="text-gray-300 hover:text-lime-400 transition-colors">Sobre Nós</a>
+                <a href="#services" onClick={(e) => handleNavClick(e, 'services')} className="text-gray-300 hover:text-lime-400 transition-colors">Serviços</a>
+                <a href="#rental-plans" onClick={(e) => handleNavClick(e, 'rental-plans')} className="text-gray-300 hover:text-lime-400 transition-colors">Aluguer</a>
+                <a href="#why-us" onClick={(e) => handleNavClick(e, 'why-us')} className="text-gray-300 hover:text-lime-400 transition-colors">Vantagens</a>
+                <a href="#faq" onClick={(e) => handleNavClick(e, 'faq')} className="text-gray-300 hover:text-lime-400 transition-colors">FAQ</a>
+                <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="text-gray-300 hover:text-lime-400 transition-colors">Contacto</a>
             </nav>
-            <button onClick={onDriverAreaClick} className="bg-amber-500 hover:bg-amber-400 text-black font-bold py-2 px-4 rounded-md transition-colors text-sm">
+            <button onClick={onDriverAreaClick} className="bg-lime-400 hover:bg-lime-500 text-black font-bold py-2 px-4 rounded-md transition-colors text-sm">
                 Área do Motorista
             </button>
         </div>
@@ -96,37 +105,37 @@ const Header: React.FC<{ onDriverAreaClick: () => void }> = ({ onDriverAreaClick
 const HeroSection: React.FC<{ onVerPlanosClick: () => void }> = ({ onVerPlanosClick }) => (
     <section className="relative min-h-[600px] py-20 md:py-32 flex items-center text-white">
         <div className="absolute inset-0 bg-black">
-             <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop" alt="Corporate background" className="w-full h-full object-cover opacity-10" />
+             <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop" alt="Mãos a apertar sobre um portátil com gráficos de negócio" className="w-full h-full object-cover opacity-20" />
         </div>
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center relative z-10">
             <div className="max-w-xl">
-                 <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Soluções Completas para TVDE: <span className="text-amber-400">Aluguer & Gestão 360°</span></h1>
+                 <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-4">O Poder das Parcerias para o seu <span className="text-lime-400">Sucesso no Mundo TVDE</span></h1>
                 <p className="text-lg md:text-xl text-gray-300 mb-8">
-                    Desde o aluguer de viaturas premium à gestão completa da sua frota. Potenciamos o seu negócio TVDE com excelência e confiança.
+                    Juntos, otimizamos a sua operação, desde o aluguer de viaturas à gestão completa da frota, garantindo a máxima rentabilidade.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                    <button onClick={onVerPlanosClick} className="bg-amber-500 hover:bg-amber-400 text-black font-bold py-3 px-8 rounded-lg transition-colors text-lg inline-flex items-center">
+                    <button onClick={onVerPlanosClick} className="bg-lime-400 hover:bg-lime-500 text-black font-bold py-3 px-8 rounded-lg transition-colors text-lg inline-flex items-center">
                         Ver Planos de Gestão 360°
                     </button>
                 </div>
             </div>
             <div className="hidden md:flex flex-col gap-6 bg-black/50 backdrop-blur-md p-8 rounded-lg border border-gray-800">
                 <div className="flex items-center gap-4">
-                    <div className="bg-amber-500/20 text-amber-400 p-3 rounded-full"><CarIcon /></div>
+                    <div className="bg-lime-400/20 text-lime-400 p-3 rounded-full"><CarIcon /></div>
                     <div>
                         <h3 className="font-bold text-xl">Viaturas Premium</h3>
                         <p className="text-gray-400">Conduza os melhores veículos do mercado.</p>
                     </div>
                 </div>
                  <div className="flex items-center gap-4">
-                    <div className="bg-amber-500/20 text-amber-400 p-3 rounded-full"><ShieldCheckIcon /></div>
+                    <div className="bg-lime-400/20 text-lime-400 p-3 rounded-full"><ShieldCheckIcon /></div>
                     <div>
                         <h3 className="font-bold text-xl">Gestão Simplificada</h3>
                         <p className="text-gray-400">Foque-se em conduzir, nós tratamos do resto.</p>
                     </div>
                 </div>
                  <div className="flex items-center gap-4">
-                    <div className="bg-amber-500/20 text-amber-400 p-3 rounded-full"><TrendingUpIcon /></div>
+                    <div className="bg-lime-400/20 text-lime-400 p-3 rounded-full"><TrendingUpIcon /></div>
                     <div>
                         <h3 className="font-bold text-xl">Maximize os Ganhos</h3>
                         <p className="text-gray-400">Otimizamos a sua operação para maior lucro.</p>
@@ -141,20 +150,20 @@ const AboutSection = () => (
     <section id="about" className="py-16 md:py-24 bg-black text-white">
         <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto">
-                 <h2 className="text-3xl font-bold mb-4">Sobre o <span className="text-amber-400">Grupo Cativante</span></h2>
+                 <h2 className="text-3xl font-bold mb-4">Sobre o <span className="text-lime-400">Grupo Cativante</span></h2>
                  <p className="text-gray-400 mb-12">Com mais de 20 anos de experiência, oferecemos soluções completas para motoristas e clientes que exigem excelência, segurança e autonomia. Somos especialistas em transporte TVDE, Uber Black e importação automóvel, sempre com foco na qualidade premium.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                 <div className="bg-gray-900/50 border border-gray-800 p-8 rounded-lg text-center">
-                    <div className="text-amber-400 text-5xl font-bold mb-2">20+</div>
+                    <div className="text-lime-400 text-5xl font-bold mb-2">20+</div>
                     <div className="text-gray-400">Anos de Experiência</div>
                 </div>
                  <div className="bg-gray-900/50 border border-gray-800 p-8 rounded-lg text-center">
-                    <div className="text-amber-400 text-5xl font-bold mb-2">500+</div>
+                    <div className="text-lime-400 text-5xl font-bold mb-2">500+</div>
                     <div className="text-gray-400">Motoristas Ativos</div>
                 </div>
                  <div className="bg-gray-900/50 border border-gray-800 p-8 rounded-lg text-center">
-                    <div className="text-amber-400 text-5xl font-bold mb-2">100%</div>
+                    <div className="text-lime-400 text-5xl font-bold mb-2">100%</div>
                     <div className="text-gray-400">Satisfação Garantida</div>
                 </div>
             </div>
@@ -166,22 +175,22 @@ const ServicesSection = () => (
     <section id="services" className="py-16 md:py-24 bg-gray-900/50 text-white">
         <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold">Os Nossos <span className="text-amber-400">Serviços 360°</span></h2>
+                <h2 className="text-3xl font-bold">Os Nossos <span className="text-lime-400">Serviços 360°</span></h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div className="bg-black border border-gray-800 p-6 rounded-lg text-center hover:border-amber-400 transition-colors">
+                <div className="bg-black border border-gray-800 p-6 rounded-lg text-center hover:border-lime-400 transition-colors">
                     <h3 className="font-bold text-xl mb-2">Criação de Empresa</h3>
                     <p className="text-gray-400 text-sm">Apoio na abertura de atividade e enquadramento fiscal para TVDE.</p>
                 </div>
-                 <div className="bg-black border border-gray-800 p-6 rounded-lg text-center hover:border-amber-400 transition-colors">
+                 <div className="bg-black border border-gray-800 p-6 rounded-lg text-center hover:border-lime-400 transition-colors">
                     <h3 className="font-bold text-xl mb-2">Contabilidade TVDE</h3>
                     <p className="text-gray-400 text-sm">Gestão contabilística mensal e anual, e entrega de declarações obrigatórias.</p>
                 </div>
-                <div className="bg-black border border-gray-800 p-6 rounded-lg text-center hover:border-amber-400 transition-colors">
+                <div className="bg-black border border-gray-800 p-6 rounded-lg text-center hover:border-lime-400 transition-colors">
                     <h3 className="font-bold text-xl mb-2">Gestão de Frota</h3>
                     <p className="text-gray-400 text-sm">Gestão de viaturas, motoristas, licenças, seguros e manutenção.</p>
                 </div>
-                <div className="bg-black border border-gray-800 p-6 rounded-lg text-center hover:border-amber-400 transition-colors">
+                <div className="bg-black border border-gray-800 p-6 rounded-lg text-center hover:border-lime-400 transition-colors">
                     <h3 className="font-bold text-xl mb-2">Aluguer e Slots</h3>
                     <p className="text-gray-400 text-sm">Fornecimento de viaturas premium ou integração da sua viatura na nossa frota.</p>
                 </div>
@@ -212,7 +221,7 @@ const CostComparisonChart: React.FC = () => {
             />
             <Legend wrapperStyle={{ color: '#d1d5db' }} />
             <Bar dataKey="Separado" fill="#a855f7" name="Custo Separado" radius={[4, 4, 0, 0]} />
-            <Bar dataKey="Pacote Integrado" fill="#f59e0b" name="Nosso Pacote" radius={[4, 4, 0, 0]} />
+            <Bar dataKey="Pacote Integrado" fill="#a3e635" name="Nosso Pacote" radius={[4, 4, 0, 0]} />
           </BarChart>
         </ResponsiveContainer>
       </div>
@@ -227,30 +236,30 @@ const PlansSection: React.FC<PlansSectionProps> = ({ onPlanSelect }) => (
     <section id="rental-plans" className="py-16 md:py-24 bg-black text-white">
         <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold">Modalidades de <span className="text-amber-400">Aluguer</span></h2>
+                <h2 className="text-3xl font-bold">Modalidades de <span className="text-lime-400">Aluguer</span></h2>
                 <p className="text-gray-400 mt-2">Para motoristas que procuram uma viatura ou querem rentabilizar a sua.</p>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                 <div className="bg-gray-900/50 border-2 border-amber-400 p-8 rounded-lg relative flex flex-col">
-                    <div className="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-amber-400 text-black text-xs font-bold px-4 py-1 rounded-full">RECOMENDADO</div>
+                 <div className="bg-gray-900/50 border-2 border-lime-400 p-8 rounded-lg relative flex flex-col">
+                    <div className="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-lime-400 text-black text-xs font-bold px-4 py-1 rounded-full">RECOMENDADO</div>
                     <div className="flex-grow">
                         <h3 className="font-bold text-xl text-center mb-2">Aluguer de Viatura</h3>
                         <p className="text-center text-gray-400 mb-4">Tesla Model 3 (ou similar)</p>
                         <p className="text-center text-4xl font-bold my-4">380€ <span className="text-lg font-normal text-gray-400">/ semana</span></p>
-                        <p className="text-center text-amber-400 font-semibold text-2xl mb-4">+ 6% <span className="text-lg font-normal text-gray-400">do ganho líquido</span></p>
+                        <p className="text-center text-lime-400 font-semibold text-2xl mb-4">+ 6% <span className="text-lg font-normal text-gray-400">do ganho líquido</span></p>
                         <p className="text-center text-xs text-gray-500 mb-6">Inclui seguro, manutenção e apoio total. O IVA sobre o aluguer é de 6%.</p>
                     </div>
-                     <button onClick={() => onPlanSelect("Olá, tenho interesse na modalidade recomendada de aluguer de viatura (Tesla).")} className="w-full block text-center bg-amber-500 text-black font-bold py-3 rounded-lg hover:bg-amber-400 transition-colors mt-auto">Escolher Esta Modalidade</button>
+                     <button onClick={() => onPlanSelect("Olá, tenho interesse na modalidade recomendada de aluguer de viatura (Tesla).")} className="w-full block text-center bg-lime-400 text-black font-bold py-3 rounded-lg hover:bg-lime-500 transition-colors mt-auto">Escolher Esta Modalidade</button>
                 </div>
                 <div className="bg-gray-900/50 border border-gray-800 p-8 rounded-lg flex flex-col">
                     <div className="flex-grow">
                         <h3 className="font-bold text-xl text-center mb-2">Aluguer de Slot</h3>
                         <p className="text-center text-gray-400 mb-4">(Viatura Própria)</p>
-                         <p className="text-center text-amber-400 font-semibold text-2xl my-4">6% <span className="text-lg font-normal text-gray-400">IVA (ganho líquido)</span></p>
-                         <p className="text-center text-amber-400 font-semibold text-2xl mb-4">+ 4% <span className="text-lg font-normal text-gray-400">pelo serviço</span></p>
+                         <p className="text-center text-lime-400 font-semibold text-2xl my-4">6% <span className="text-lg font-normal text-gray-400">IVA (ganho líquido)</span></p>
+                         <p className="text-center text-lime-400 font-semibold text-2xl mb-4">+ 4% <span className="text-lg font-normal text-gray-400">pelo serviço</span></p>
                          <p className="text-center text-gray-400 text-sm">Use o seu carro sob a nossa estrutura empresarial, sem burocracias.</p>
                     </div>
-                     <button onClick={() => onPlanSelect("Olá, gostaria de saber mais sobre o aluguer de slot para a minha viatura própria.")} className="w-full block text-center border-2 border-gray-500 text-white font-bold py-3 rounded-lg hover:border-amber-400 hover:text-amber-400 transition-colors mt-auto">Escolher Esta Modalidade</button>
+                     <button onClick={() => onPlanSelect("Olá, gostaria de saber mais sobre o aluguer de slot para a minha viatura própria.")} className="w-full block text-center border-2 border-gray-500 text-white font-bold py-3 rounded-lg hover:border-lime-400 hover:text-lime-400 transition-colors mt-auto">Escolher Esta Modalidade</button>
                 </div>
                 <div className="bg-gray-900/50 border border-gray-800 p-8 rounded-lg flex flex-col">
                     <div className="flex-grow">
@@ -259,7 +268,7 @@ const PlansSection: React.FC<PlansSectionProps> = ({ onPlanSelect }) => (
                         <p className="text-center text-4xl font-bold my-4">Desde 230€ <span className="text-lg font-normal text-gray-400">/semana</span></p>
                         <p className="text-center text-gray-400 text-sm">Temos outras viaturas disponíveis para aluguer. Fale connosco para saber as opções e condições.</p>
                     </div>
-                    <button onClick={() => onPlanSelect("Olá, podem informar-me sobre as outras viaturas para aluguer a partir de 230€?")} className="w-full block text-center border-2 border-gray-500 text-white font-bold py-3 rounded-lg hover:border-amber-400 hover:text-amber-400 transition-colors mt-auto">Consultar Opções</button>
+                    <button onClick={() => onPlanSelect("Olá, podem informar-me sobre as outras viaturas para aluguer a partir de 230€?")} className="w-full block text-center border-2 border-gray-500 text-white font-bold py-3 rounded-lg hover:border-lime-400 hover:text-lime-400 transition-colors mt-auto">Consultar Opções</button>
                 </div>
             </div>
         </div>
@@ -276,11 +285,11 @@ const ManagementPlansModal: React.FC<{ onClose: () => void; onContactClick: () =
     ];
 
     const PlanCard: React.FC<{title: string, subtitle: string, price: string, saving: string, highlight?: boolean}> = ({title, subtitle, price, saving, highlight}) => (
-        <div className={`bg-gray-900/50 border ${highlight ? 'border-amber-400 border-2' : 'border-gray-800'} p-8 rounded-lg text-center flex flex-col`}>
+        <div className={`bg-gray-900/50 border ${highlight ? 'border-lime-400 border-2' : 'border-gray-800'} p-8 rounded-lg text-center flex flex-col`}>
             <div className="flex-grow">
                 <h3 className="font-bold text-xl mb-2">{title}</h3>
                 <p className="text-gray-400 mb-4">{subtitle}</p>
-                <p className="text-5xl font-bold my-4 text-amber-400">{price}<span className="text-lg font-normal text-gray-400">/mês</span></p>
+                <p className="text-5xl font-bold my-4 text-lime-400">{price}<span className="text-lg font-normal text-gray-400">/mês</span></p>
                 <p className="text-green-400 font-semibold mb-6">{saving}</p>
                 <ul className="space-y-3 text-left my-6">
                     {servicesIncluded.map(service => (
@@ -299,7 +308,7 @@ const ManagementPlansModal: React.FC<{ onClose: () => void; onContactClick: () =
             <div className="bg-black border border-gray-800 rounded-2xl w-full max-w-6xl max-h-[90vh] overflow-y-auto p-8 relative">
                 <button onClick={onClose} className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors"><CloseIcon /></button>
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl font-bold text-white">Planos de Gestão <span className="text-amber-400">360°</span></h2>
+                    <h2 className="text-4xl font-bold text-white">Planos de Gestão <span className="text-lime-400">360°</span></h2>
                     <p className="text-gray-400 mt-2 text-lg">Para investidores e donos de frota que procuram tranquilidade e maximização de lucros.</p>
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -309,7 +318,7 @@ const ManagementPlansModal: React.FC<{ onClose: () => void; onContactClick: () =
                 </div>
                 <CostComparisonChart />
                 <div className="text-center mt-12">
-                    <button onClick={onContactClick} className="bg-amber-500 hover:bg-amber-400 text-black font-bold py-3 px-8 rounded-lg transition-colors text-lg">
+                    <button onClick={onContactClick} className="bg-lime-400 hover:bg-lime-500 text-black font-bold py-3 px-8 rounded-lg transition-colors text-lg">
                         Fale com um Especialista
                     </button>
                 </div>
@@ -331,12 +340,12 @@ const WhyChooseUsSection = () => {
         <section id="why-us" className="py-16 md:py-24 bg-gray-900/50 text-white">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl font-bold">Por que escolher o <span className="text-amber-400">Grupo Cativante?</span></h2>
+                    <h2 className="text-3xl font-bold">Por que escolher o <span className="text-lime-400">Grupo Cativante?</span></h2>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     {advantages.map(adv => (
                         <div key={adv.title} className="bg-black p-6 rounded-lg border border-gray-800">
-                            <h3 className="font-bold text-xl text-amber-400 mb-2">{adv.title}</h3>
+                            <h3 className="font-bold text-xl text-lime-400 mb-2">{adv.title}</h3>
                             <p className="text-gray-400 text-sm">{adv.description}</p>
                         </div>
                     ))}
@@ -371,7 +380,7 @@ const FaqSection = () => {
         <section id="faq" className="py-16 md:py-24 bg-black text-white">
             <div className="container mx-auto px-4 max-w-4xl">
                 <div className="text-center mb-12">
-                     <h2 className="text-3xl font-bold">Perguntas <span className="text-amber-400">Frequentes</span></h2>
+                     <h2 className="text-3xl font-bold">Perguntas <span className="text-lime-400">Frequentes</span></h2>
                 </div>
                 <div>
                     {faqs.map((faq, index) => (
@@ -390,7 +399,7 @@ const ContactSection: React.FC = () => {
     <section id="contact" className="py-16 md:py-24 bg-gray-900/50 text-white">
         <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold">Entre em <span className="text-amber-400">Contacto</span></h2>
+                <h2 className="text-3xl font-bold">Entre em <span className="text-lime-400">Contacto</span></h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                  <div className="bg-black border border-gray-800 p-8 rounded-lg text-center flex flex-col items-center">
@@ -408,7 +417,7 @@ const ContactSection: React.FC = () => {
                     <MailIcon />
                     <h3 className="font-bold text-xl my-4">Email</h3>
                     <p className="text-gray-400 mb-4">cativante.geral@gmail.com</p>
-                    <a href="mailto:cativante.geral@gmail.com" className="border-2 border-gray-500 text-white font-bold py-2 px-6 rounded-lg hover:border-amber-400 hover:text-amber-400 transition-colors">Enviar Email</a>
+                    <a href="mailto:cativante.geral@gmail.com" className="border-2 border-gray-500 text-white font-bold py-2 px-6 rounded-lg hover:border-lime-400 hover:text-lime-400 transition-colors">Enviar Email</a>
                  </div>
             </div>
         </div>
@@ -423,9 +432,9 @@ const Footer: React.FC = () => (
             </div>
             <p className="mb-6 max-w-2xl mx-auto">Mais de 20 anos de experiência em transportes TVDE, oferecendo soluções completas para motoristas que exigem excelência e autonomia.</p>
             <div className="flex justify-center gap-6 mb-8">
-                 <a href="#about" onClick={(e) => handleNavClick(e, 'about')} className="text-gray-400 hover:text-amber-400 transition-colors">Sobre Nós</a>
-                 <a href="#services" onClick={(e) => handleNavClick(e, 'services')} className="text-gray-400 hover:text-amber-400 transition-colors">Serviços</a>
-                 <a href="#rental-plans" onClick={(e) => handleNavClick(e, 'rental-plans')} className="text-gray-400 hover:text-amber-400 transition-colors">Aluguer</a>
+                 <a href="#about" onClick={(e) => handleNavClick(e, 'about')} className="text-gray-400 hover:text-lime-400 transition-colors">Sobre Nós</a>
+                 <a href="#services" onClick={(e) => handleNavClick(e, 'services')} className="text-gray-400 hover:text-lime-400 transition-colors">Serviços</a>
+                 <a href="#rental-plans" onClick={(e) => handleNavClick(e, 'rental-plans')} className="text-gray-400 hover:text-lime-400 transition-colors">Aluguer</a>
             </div>
             <p className="text-sm text-gray-500">&copy; {new Date().getFullYear()} Grupo Cativante. Todos os direitos reservados.</p>
         </div>
@@ -436,7 +445,7 @@ const Footer: React.FC = () => (
 const ChatToggleButton: React.FC<{ onClick: () => void }> = ({ onClick }) => (
     <button
         onClick={onClick}
-        className="bg-amber-500 hover:bg-amber-400 text-black rounded-full p-4 shadow-lg hover:scale-110 transition-transform"
+        className="bg-lime-400 hover:bg-lime-500 text-black rounded-full p-4 shadow-lg hover:scale-110 transition-transform"
         aria-label="Abrir chat"
     >
         <ChatBubbleIcon />
