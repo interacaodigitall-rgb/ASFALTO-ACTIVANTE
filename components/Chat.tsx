@@ -7,6 +7,7 @@ interface ChatProps {
   onSendMessage: (message: string) => void;
   isLoading: boolean;
   onClose: () => void;
+  onRequestHuman: () => void;
 }
 
 const SendIcon = () => (
@@ -23,8 +24,10 @@ const AssistantAvatar = () => (
     </div>
 );
 
+const WhatsAppIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.886-.001 2.269.655 4.357 1.846 6.215l-1.064 3.886 3.995-1.042z" /></svg>;
 
-export const Chat: React.FC<ChatProps> = ({ messages, onSendMessage, isLoading, onClose }) => {
+
+export const Chat: React.FC<ChatProps> = ({ messages, onSendMessage, isLoading, onClose, onRequestHuman }) => {
   const [input, setInput] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -53,9 +56,19 @@ export const Chat: React.FC<ChatProps> = ({ messages, onSendMessage, isLoading, 
     <div className="flex flex-col h-full w-full bg-black rounded-xl shadow-2xl border border-gray-700">
        <div className="flex items-center justify-between p-4 border-b border-gray-700 bg-gray-900/80 backdrop-blur-sm rounded-t-xl">
             <h3 className="font-bold text-white text-lg">Assistente Cativante</h3>
-            <button onClick={onClose} className="text-gray-400 hover:text-white" aria-label="Fechar chat">
-                <CloseIcon />
-            </button>
+            <div className="flex items-center gap-2">
+                <button 
+                    onClick={onRequestHuman} 
+                    className="flex items-center gap-2 text-gray-200 hover:text-white bg-green-600/20 hover:bg-green-600/40 px-3 py-1.5 rounded-md transition-colors" 
+                    aria-label="Falar com um gestor"
+                >
+                    <WhatsAppIcon />
+                    <span className="text-xs font-semibold">Falar com Gestor</span>
+                </button>
+                <button onClick={onClose} className="text-gray-400 hover:text-white" aria-label="Fechar chat">
+                    <CloseIcon />
+                </button>
+            </div>
         </div>
       <div className="flex-1 p-6 overflow-y-auto">
         <div className="space-y-6">

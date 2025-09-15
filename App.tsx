@@ -473,6 +473,13 @@ const MainLayout: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [isPlansModalOpen, setIsPlansModalOpen] = useState(false);
+  
+  const WHATSAPP_URL = "https://wa.me/351914800818?text=" + encodeURIComponent("Olá! Vim do vosso site e gostaria de falar com um gestor sobre os vossos serviços.");
+  const ACTION_CODE = "[ACTION:WHATSAPP]";
+
+  const handleRequestHuman = useCallback(() => {
+    window.open(WHATSAPP_URL, '_blank');
+  }, [WHATSAPP_URL]);
 
   const handleSendMessage = useCallback(async (message: string) => {
     // Reset quick replies on new message
@@ -490,8 +497,15 @@ const MainLayout: React.FC = () => {
 
     try {
         const response = await getAssistantResponse(updatedHistory);
+        let responseText = response.text;
+
+        if (responseText.includes(ACTION_CODE)) {
+            responseText = responseText.replace(ACTION_CODE, "").trim();
+            handleRequestHuman();
+        }
+
         const assistantMessage: ChatMessage = {
-            id: (Date.now() + 1).toString(), role: 'assistant', text: response.text,
+            id: (Date.now() + 1).toString(), role: 'assistant', text: responseText,
         };
         setChatHistory(prev => [...prev, assistantMessage]);
     } catch (error) {
@@ -503,7 +517,7 @@ const MainLayout: React.FC = () => {
     } finally {
         setIsLoading(false);
     }
-  }, [chatHistory]);
+  }, [chatHistory, handleRequestHuman]);
 
   const openChatWithPrompt = useCallback(async (prompt: string) => {
       setIsChatOpen(true);
@@ -548,7 +562,13 @@ const MainLayout: React.FC = () => {
             </div>
             {isChatOpen && (
                 <div className="fixed bottom-5 right-5 sm:bottom-20 z-50 w-[calc(100%-2.5rem)] max-w-md h-[70vh] max-h-[600px] transition-all duration-300 ease-in-out">
-                    <Chat messages={chatHistory} onSendMessage={handleSendMessage} isLoading={isLoading} onClose={toggleChat} />
+                    <Chat 
+                        messages={chatHistory} 
+                        onSendMessage={handleSendMessage} 
+                        isLoading={isLoading} 
+                        onClose={toggleChat}
+                        onRequestHuman={handleRequestHuman}
+                    />
                 </div>
             )}
         </div>

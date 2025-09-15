@@ -12,6 +12,12 @@ const SYSTEM_PROMPT = `
 *   **Linguagem Persuasiva:** Utiliza gatilhos de confiança e autoridade. Menciona os "mais de 20 anos de experiência" e os "mais de 500 motoristas ativos" como prova do nosso sucesso e fiabilidade.
 *   **Objetivo Final (CTA):** O teu objetivo é claro: levar o cliente a falar com um gestor humano. Cada interação deve terminar com uma pergunta de fecho que encaminhe para o próximo passo. Sê direto: "Com base no que conversámos, a modalidade de Aluguer de Viatura Premium parece ser a ideal para si. Posso pedir a um gestor que lhe ligue nos próximos 15 minutos para tratar da sua adesão?"
 
+# FERRAMENTAS ESPECIAIS (Ações)
+*   **Encaminhar para Humano:** Se o cliente expressar um desejo claro de falar com um gestor, finalizar um contrato, ou se a conversa chegar a um ponto onde a intervenção humana é o próximo passo lógico, a tua resposta DEVE incluir o código especial \`[ACTION:WHATSAPP]\` no final.
+*   **Exemplo de Uso:**
+    *   Utilizador: "Ok, quero avançar com o aluguer do Tesla."
+    *   A tua resposta: "Excelente decisão! O próximo passo é falar com um dos nossos gestores para formalizar tudo. Vou encaminhá-lo agora mesmo para o nosso WhatsApp para um atendimento personalizado. [ACTION:WHATSAPP]"
+
 # BASE DE CONHECIMENTO ESTRATÉGICA (Memoriza e aplica isto)
 
 **NOSSOS DIFERENCIAIS (USA ISTO FREQUENTEMENTE):**
@@ -60,7 +66,6 @@ const SYSTEM_PROMPT = `
 4.  **Fecho/CTA:** "Esta solução parece-lhe ir ao encontro do que procura para otimizar os seus resultados? Podemos agendar uma chamada com um especialista para detalhar o plano financeiro e iniciar a nossa parceria de sucesso?"
 `;
 
-// This is the standard for Vercel Edge Functions, which is a good default.
 export const config = {
   runtime: 'edge',
 };
@@ -86,20 +91,29 @@ export default async function handler(request: Request): Promise<Response> {
 
         const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
-        const contents = history.map(msg => ({
+        const geminiHistory = history.map(msg => ({
             role: msg.role === 'user' ? 'user' : 'model',
             parts: [{ text: msg.text }],
         }));
-
-        const response = await ai.models.generateContent({
-             model: 'gemini-2.5-flash',
-             contents: contents,
-             config: {
-                systemInstruction: SYSTEM_PROMPT,
-             }
-        });
         
-        const responseText = response.text;
+        const lastMessage = geminiHistory.pop();
+        if (!lastMessage || lastMessage.role !== 'user') {
+             return new Response(JSON.stringify({ error: 'No user message found to process.' }), {
+                status: 400,
+                headers: { 'Content-Type': 'application/json' },
+            });
+        }
+
+        const chat = ai.chats.create({
+          model: 'gemini-2.5-flash',
+          config: {
+            systemInstruction: SYSTEM_PROMPT,
+          },
+          history: geminiHistory,
+        });
+
+        const result = await chat.sendMessage({ message: lastMessage.parts[0].text });
+        const responseText = result.text;
 
         return new Response(JSON.stringify({ text: responseText }), {
             status: 200,
